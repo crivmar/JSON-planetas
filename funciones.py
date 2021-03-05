@@ -42,8 +42,23 @@ def listar_info(l):
 def cont_info(l):
     dic={}
     for i in l:
-        if i.get("moons")==False:
-            dic[i.get("name")]=0
+        if i.get("moons")==None:
+            dic[i.get("name")]="0"
         else:
-            dic[i.get("name")]=i.get("moons")
+            if i.get("name")=="Mercury":
+                dic["Mercurio"]="0"
+            elif i.get("name")=="Earth":
+                dic["Tierra"]=i.get("moons")
+            elif i.get("name")=="Mars":
+                dic["Marte"]=i.get("moons")
+            elif i.get("name")=="Saturn":
+                dic["Saturno"]=i.get("moons")
+            elif i.get("name")=="Uranus":
+                dic["Urano"]=i.get("moons")
+            elif i.get("name")=="Neptune":
+                dic["Neptuno"]=i.get("moons")
+            elif i.get("name")=="Pluto":
+                dic["Plutón"]=i.get("moons")
+            else:
+                dic[i.get("name")]=i.get("moons")
     return dic

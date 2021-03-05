@@ -12,4 +12,6 @@ while m!=6:
             print(i,"y esta es su imagen:", j)
     ## Ejercicio 2 ##
     if m==2:
-        print(cont_info(documento))
+        for i,j in cont_info(documento).items():
+            print(" ")
+            print(i,"tiene:",len(j),"lunas.")

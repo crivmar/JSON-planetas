@@ -63,7 +63,27 @@ def cont_info(l):
     return dic
 
 def filtro(l):
-    dic={}
+    var=0
     t=input("Introduce el nombre de un planeta, en español: ")
-    
+    for i in l:
+        if t.lower=="mercurio":
+            var="No tiene lunas."
+        elif t.lower=="venus":
+            var="No tiene lunas."
+        elif t.lower=="tierra":
+            var="La Luna."
+        elif t.lower=="marte":
+            var=i.get("moons")
+        elif t.lower=="jupiter":
+            var=i.get("moons")
+        elif t.lower=="saturno":
+            var=i.get("moons")
+        elif t.lower=="urano":
+            var=i.get("moons")
+        elif t.lower=="neptuno":
+            var=i.get("moons")
+        elif t.lower=="plutón" or "pluton":
+            var=i.get("moons")
+    return var
+
     

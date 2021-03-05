@@ -26,3 +26,8 @@ while m!=6:
     if m==3:
         print(" ")
         print(filtro(documento))
+    ## Ejercicio 4 ##
+    if m==4:
+        print(" ")
+        print(busc_rel(documento))
+        

@@ -29,8 +29,6 @@ def listar_info(l):
             dic["Tierra"]=i.get("image")
         elif i.get("name")=="Mars":
             dic["Marte"]=i.get("image")
-        elif i.get("name")=="Jupiter":
-            dic["Jupiter"]=i.get("image")
         elif i.get("name")=="Saturn":
             dic["Saturno"]=i.get("image")
         elif i.get("name")=="Uranus":
@@ -52,8 +50,6 @@ def cont_info(l):
             dic["Tierra"]=i.get("moons")
         elif i.get("name")=="Mars":
             dic["Marte"]=i.get("moons")
-        elif i.get("name")=="Jupiter":
-            dic["Jupiter"]=i.get("moons")
         elif i.get("name")=="Saturn":
             dic["Saturno"]=i.get("moons")
         elif i.get("name")=="Uranus":
@@ -105,7 +101,18 @@ def filtro(l):
     else:
         dicaux="Error, planeta no está en la base de datos o está mal escrito."
     return dicaux
-        
+
+def busc_rel(l):
+    t=input("Introduce el nombre de una luna (recomendado usar la opción 3 antes): ")
+    t=t.capitalize()
+    for i in l:
+        if t in i.get("moons"):
+            var=i.get("name")
+        else:
+            var=0
+    return var
+    
+
     
 
     

@@ -61,3 +61,9 @@ def cont_info(l):
         else:
             dic[i.get("name")]=i.get("moons")
     return dic
+
+def filtro(l):
+    dic={}
+    t=input("Introduce el nombre de un planeta, en español: ")
+    
+    

@@ -36,7 +36,7 @@ def listar_info(l):
         elif i.get("name")=="Neptune":
             dic["Neptuno"]=i.get("image")
         elif i.get("name")=="Pluto":
-            dic["Plutón"]=i.get("image")
+            dic["Pluton"]=i.get("image")
     return dic
 
 def cont_info(l):
@@ -57,7 +57,7 @@ def cont_info(l):
         elif i.get("name")=="Neptune":
             dic["Neptuno"]=i.get("moons")
         elif i.get("name")=="Pluto":
-            dic["Plutón"]=i.get("moons")
+            dic["Pluton"]=i.get("moons")
         else:
             dic[i.get("name")]=i.get("moons")
     return dic
@@ -83,7 +83,7 @@ def filtro(l):
         elif i.get("name")=="Neptune":
             dic["neptuno"]=i.get("moons")
         elif i.get("name")=="Pluto":
-            dic["plutón"]=i.get("moons")
+            dic["pluton"]=i.get("moons")
         else:
             dic[i.get("name")]=i.get("moons")
     t=input("Introduce el nombre de un planeta, en español: ")
@@ -103,14 +103,39 @@ def filtro(l):
     return dicaux
 
 def busc_rel(l):
+    dic={}
+    dicaux={}
+    for i in l:
+        if i.get("name")=="Mercury":
+            dic["mercurio"]="No tiene lunas."
+        elif i.get("name")=="Venus":
+            dic["venus"]="No tiene lunas."
+        elif i.get("name")=="Earth":                
+            dic["Tierra"]="La Luna"
+        elif i.get("name")=="Mars":
+            dic["Marte"]=i.get("moons")
+        elif i.get("name")=="Jupiter":
+            dic["Jupiter"]=i.get("moons")
+        elif i.get("name")=="Saturn":
+            dic["Saturno"]=i.get("moons")
+        elif i.get("name")=="Uranus":
+            dic["Urano"]=i.get("moons")
+        elif i.get("name")=="Neptune":
+            dic["Neptuno"]=i.get("moons")
+        elif i.get("name")=="Pluto":
+            dic["Pluton"]=i.get("moons")
+        else:
+            dic[i.get("name")]=i.get("moons")
     t=input("Introduce el nombre de una luna (recomendado usar la opción 3 antes): ")
     t=t.capitalize()
-    for i in l:
-        if t in i.get("moons"):
-            var=i.get("name")
+    if t in dic.values():
+        if t=="La Luna":
+            dicaux="Tierra"
         else:
-            var=0
-    return var
+            dicaux=dic.keys()
+    else:
+        dicaux="Error, la luna no está en la base de datos o está mal escrita."
+    return dicaux
     
 
     

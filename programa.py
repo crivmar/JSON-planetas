@@ -14,4 +14,11 @@ while m!=6:
     if m==2:
         for i,j in cont_info(documento).items():
             print(" ")
-            print(i,"tiene:",len(j),"lunas.")
+            if i=="Mercurio":
+                print("Mercurio no tiene lunas.")
+            elif i=="Venus":
+                print("Venus no tiene lunas.")
+            elif i=="Tierra":
+                print(i,"tiene",len(j),"luna.")
+            else:
+               print(i,"tiene",len(j),"lunas.") 

@@ -29,6 +29,8 @@ def listar_info(l):
             dic["Tierra"]=i.get("image")
         elif i.get("name")=="Mars":
             dic["Marte"]=i.get("image")
+        elif i.get("name")=="Jupiter":
+            dic["Júpiter"]=i.get("image")
         elif i.get("name")=="Saturn":
             dic["Saturno"]=i.get("image")
         elif i.get("name")=="Uranus":
@@ -50,6 +52,8 @@ def cont_info(l):
             dic["Tierra"]=i.get("moons")
         elif i.get("name")=="Mars":
             dic["Marte"]=i.get("moons")
+        elif i.get("name")=="Jupiter":
+            dic["Júpiter"]=i.get("moons")
         elif i.get("name")=="Saturn":
             dic["Saturno"]=i.get("moons")
         elif i.get("name")=="Uranus":
@@ -63,27 +67,33 @@ def cont_info(l):
     return dic
 
 def filtro(l):
-    var=0
-    t=input("Introduce el nombre de un planeta, en español: ")
+    dic={}
     for i in l:
-        if t.lower=="mercurio":
-            var="No tiene lunas."
-        elif t.lower=="venus":
-            var="No tiene lunas."
-        elif t.lower=="tierra":
-            var="La Luna."
-        elif t.lower=="marte":
-            var=i.get("moons")
-        elif t.lower=="jupiter":
-            var=i.get("moons")
-        elif t.lower=="saturno":
-            var=i.get("moons")
-        elif t.lower=="urano":
-            var=i.get("moons")
-        elif t.lower=="neptuno":
-            var=i.get("moons")
-        elif t.lower=="plutón" or "pluton":
-            var=i.get("moons")
-    return var
+        if i.get("name")=="Mercury":
+            dic["Mercurio"]="0"
+        elif i.get("name")=="Venus":
+            dic["Venus"]="0"
+        elif i.get("name")=="Earth":                
+            dic["Tierra"]=i.get("moons")
+        elif i.get("name")=="Mars":
+            dic["Marte"]=i.get("moons")
+        elif i.get("name")=="Jupiter":
+            dic["Júpiter"]=i.get("moons")
+        elif i.get("name")=="Saturn":
+            dic["Saturno"]=i.get("moons")
+        elif i.get("name")=="Uranus":
+            dic["Urano"]=i.get("moons")
+        elif i.get("name")=="Neptune":
+            dic["Neptuno"]=i.get("moons")
+        elif i.get("name")=="Pluto":
+            dic["Plutón"]=i.get("moons")
+        else:
+            dic[i.get("name")]=i.get("moons")
+    t=input("Introduce el nombre de un planeta, en español: ")
+    t=t.lower()
+
+    if t in dic:
+
+    return 
 
     

@@ -45,5 +45,5 @@ def cont_info(l):
         if i.get("moons")==False:
             dic[i.get("name")]=0
         else:
-            dic[i.get("name")]=len(i.get["monns"])
+            dic[i.get("name")]=i.get["moons"]
     return dic

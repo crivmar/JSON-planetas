@@ -8,3 +8,4 @@ m=0
 while m!=6:
     m=menu()
     ## Ejercicio 1##
+    print(listar_info(documento))

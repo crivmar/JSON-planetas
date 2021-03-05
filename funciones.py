@@ -5,7 +5,6 @@ def leer_documento(d):
     return l
 
 def menu():
-    def menu():
     print('''
     1. Nombre e imagenes de los planetas del Sistema Solar.
     2. Nº de satélites por planeta.
@@ -21,4 +20,8 @@ def menu():
         opcion=int(input("Elige una opción: "))
     return opcion
 
-
+def listar_info(l):
+    dic={}
+    for i in l:
+        dic[i.get("name")]=i.get("image")
+    return dic

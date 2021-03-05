@@ -30,7 +30,7 @@ def listar_info(l):
         elif i.get("name")=="Mars":
             dic["Marte"]=i.get("image")
         elif i.get("name")=="Jupiter":
-            dic["Júpiter"]=i.get("image")
+            dic["Jupiter"]=i.get("image")
         elif i.get("name")=="Saturn":
             dic["Saturno"]=i.get("image")
         elif i.get("name")=="Uranus":
@@ -53,7 +53,7 @@ def cont_info(l):
         elif i.get("name")=="Mars":
             dic["Marte"]=i.get("moons")
         elif i.get("name")=="Jupiter":
-            dic["Júpiter"]=i.get("moons")
+            dic["Jupiter"]=i.get("moons")
         elif i.get("name")=="Saturn":
             dic["Saturno"]=i.get("moons")
         elif i.get("name")=="Uranus":
@@ -79,7 +79,7 @@ def filtro(l):
         elif i.get("name")=="Mars":
             dic["marte"]=i.get("moons")
         elif i.get("name")=="Jupiter":
-            dic["júpiter"]=i.get("moons")
+            dic["jupiter"]=i.get("moons")
         elif i.get("name")=="Saturn":
             dic["saturno"]=i.get("moons")
         elif i.get("name")=="Uranus":
@@ -93,9 +93,9 @@ def filtro(l):
     t=input("Introduce el nombre de un planeta, en español: ")
     t=t.lower()
     if t in dic:
-        dicaux=dic[t]
+        dicaux=", ".join(dic[t])
     else:
-        dicaux="Error."
+        dicaux=False
     return dicaux
         
     

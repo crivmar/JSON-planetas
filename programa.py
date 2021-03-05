@@ -25,4 +25,4 @@ while m!=6:
     ## Ejercicio 3 ##
     if m==3:
         print(" ")
-        print(", ".join(filtro(documento)))
+        print((filtro(documento))

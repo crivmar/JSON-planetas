@@ -7,7 +7,11 @@ print(documento)
 m=0
 while m!=6:
     m=menu()
-    ## Ejercicio 1##
-    for i,j in listar_info(documento).items():
-        print(" ")
-        print(i,"y esta es su imagen:", j)
+    ## Ejercicio 1 ##
+    if m==1:
+        for i,j in listar_info(documento).items():
+            print(" ")
+            print(i,"y esta es su imagen:", j)
+    ## Ejercicio 2 ##
+    if m==2:
+        print(cont_info(documento))

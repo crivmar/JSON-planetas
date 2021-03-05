@@ -91,11 +91,19 @@ def filtro(l):
         else:
             dic[i.get("name")]=i.get("moons")
     t=input("Introduce el nombre de un planeta, en español: ")
+    print(" ")
     t=t.lower()
     if t in dic:
-        dicaux=", ".join(dic[t])
+        if t=="tierra":
+            dicaux="La Luna."
+        elif t=="mercurio":
+            dicaux="No tiene lunas."
+        elif t=="venus":
+            dicaux="No tiene lunas."
+        else:
+            dicaux=", ".join(dic[t])
     else:
-        dicaux=False
+        dicaux="Error, planeta no está en la base de datos o está mal escrito."
     return dicaux
         
     

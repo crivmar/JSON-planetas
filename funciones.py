@@ -92,12 +92,12 @@ def filtro(l):
             dic[i.get("name")]=i.get("moons")
     t=input("Introduce el nombre de un planeta, en español: ")
     t=t.lower()
-    try:
-        if t in dic:
-            dicaux=dic[t]
-        return dicaux
-    except:
-        print("El planeta no existe en la base de datos o está mal escrito.")
+    if t in dic:
+        dicaux=dic[t]
+    else:
+        dicaux="Error."
+    return dicaux
+        
     
 
     

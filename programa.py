@@ -24,6 +24,5 @@ while m!=6:
                print(i,"tiene",len(j),"lunas.") 
     ## Ejercicio 3 ##
     if m==3:
-        for i in filtro(documento):
-            print(" ")
-            print(i)
+        print(" ")
+        print(", ".join(filtro(documento)))

@@ -68,32 +68,36 @@ def cont_info(l):
 
 def filtro(l):
     dic={}
+    dicaux={}
     for i in l:
         if i.get("name")=="Mercury":
-            dic["Mercurio"]="0"
+            dic["mercurio"]="No tiene lunas."
         elif i.get("name")=="Venus":
-            dic["Venus"]="0"
+            dic["venus"]="No tiene lunas."
         elif i.get("name")=="Earth":                
-            dic["Tierra"]=i.get("moons")
+            dic["tierra"]="La Luna"
         elif i.get("name")=="Mars":
-            dic["Marte"]=i.get("moons")
+            dic["marte"]=i.get("moons")
         elif i.get("name")=="Jupiter":
-            dic["Júpiter"]=i.get("moons")
+            dic["júpiter"]=i.get("moons")
         elif i.get("name")=="Saturn":
-            dic["Saturno"]=i.get("moons")
+            dic["saturno"]=i.get("moons")
         elif i.get("name")=="Uranus":
-            dic["Urano"]=i.get("moons")
+            dic["urano"]=i.get("moons")
         elif i.get("name")=="Neptune":
-            dic["Neptuno"]=i.get("moons")
+            dic["neptuno"]=i.get("moons")
         elif i.get("name")=="Pluto":
-            dic["Plutón"]=i.get("moons")
+            dic["plutón"]=i.get("moons")
         else:
             dic[i.get("name")]=i.get("moons")
     t=input("Introduce el nombre de un planeta, en español: ")
     t=t.lower()
-
-    if t in dic:
-
-    return 
+    try:
+        if t in dic:
+            dicaux=dic[t]
+        return dicaux
+    except:
+        print("El planeta no existe en la base de datos o está mal escrito.")
+    
 
     

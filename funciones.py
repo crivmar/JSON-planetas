@@ -23,5 +23,18 @@ def menu():
 def listar_info(l):
     dic={}
     for i in l:
-        dic[i.get("name")]=i.get("image")
+        if i.get("name")=="Mercury":
+            dic["Mercurio"]=i.get("image")
+        elif i.get("name")=="Earth":
+            dic["Tierra"]=i.get("image")
+        elif i.get("name")=="Mars":
+            dic["Marte"]=i.get("image")
+        elif i.get("name")=="Saturn":
+            dic["Saturno"]=i.get("image")
+        elif i.get("name")=="Uranus":
+            dic["Urano"]=i.get("image")
+        elif i.get("name")=="Neptune":
+            dic["Neptuno"]=i.get("image")
+        elif i.get("name")=="Pluto":
+            dic["Plutón"]=i.get("image")
     return dic

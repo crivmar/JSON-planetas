@@ -134,7 +134,7 @@ def busc_rel(l):
     return var
 
 def dist(l):
-   dic={}
+    dic={}
     for i in l:
         if i.get("name")=="Mercury":
             dic["Mercurio"]=float(i.get("distance"))

@@ -29,8 +29,9 @@ while m!=6:
     ## Ejercicio 4 ##
     if m==4:
         print(" ")
-        print(busc_rel(documento))
+        print(busc_rel(documento)) 
     ## Ejercicio 5 ##
     if m==5:
-    
+        print(" ")
+        print(dist(documento))
 print("Fin del programa.")

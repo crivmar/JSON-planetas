@@ -134,8 +134,22 @@ def busc_rel(l):
     return var
 
 def dist(l):
-
-
-    
-
-    
+   dic={}
+    for i in l:
+        if i.get("name")=="Mercury":
+            dic["Mercurio"]=float(i.get("distance"))
+        elif i.get("name")=="Earth":                
+            dic["Tierra"]=float(i.get("distance"))
+        elif i.get("name")=="Mars":
+            dic["Marte"]=float(i.get("distance"))
+        elif i.get("name")=="Saturn":
+            dic["Saturno"]=float(i.get("distance"))
+        elif i.get("name")=="Uranus":
+            dic["Urano"]=float(i.get("distance"))
+        elif i.get("name")=="Neptune":
+            dic["Neptuno"]=float(i.get("distance"))
+        elif i.get("name")=="Pluto":
+            dic["Pluton"]=float(i.get("distance"))
+        else:
+            dic[i.get("name")]=float(i.get("distance"))
+    return dic

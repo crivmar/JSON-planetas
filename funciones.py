@@ -130,14 +130,23 @@ def busc_rel(l):
             dic[i.get("name")]=i.get("moons")
     t=input("Introduce el nombre de una luna (recomendado usar la opción 3 antes): ")
     t=t.capitalize()
-    if t in dic.values():
-        if t=="La Luna":
-            dicaux="Tierra"
-        else:
-            dicaux=dic.keys()
-    else:
-        dicaux="Error, la luna no está en la base de datos o está mal escrita."
-    return dicaux
+    for i,j in dic.items():
+        for x in j:
+            if x==t:
+                var=i
+    # for i in l:
+    #     print(i)
+    #         # if i==t:
+    #         #     dic["planeta"]=l.get("name")
+    # if t in dic.values():
+    #     if t=="La Luna":
+    #         dicaux="Tierra"
+    #     else:
+    #         for i in dic.key(t):
+    #             dicaux=i
+    # else:
+    #     dicaux="Error, la luna no está en la base de datos o está mal escrita."
+    return var
     
 
     

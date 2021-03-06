@@ -106,7 +106,7 @@ def filtro(l):
 
 def busc_rel(l):
     dic={}
-    dicaux={}
+    var=None
     for i in l:
         if i.get("name")=="Earth":                
             dic["Tierra"]="La Luna"
@@ -123,11 +123,16 @@ def busc_rel(l):
         elif i.get("name")=="Pluto":
             dic["Pluton"]=i.get("moons")
     t=input("Introduce el nombre de una luna (recomendado usar la opción 3 antes): ")
-    t=t.capitalize()
-    for i,j in dic.items():
-        for x in j:
-            if x==t:
-                var=i
+    t=t.title()
+    if t=="La Luna":
+        var="Tierra"
+    else:
+        for i,j in dic.items():
+            for x in j:
+                if x==t:
+                    var=i
+        if var==None:
+            var="No existe en la base de datos."
     return var
     
 

@@ -30,4 +30,3 @@ while m!=6:
     if m==4:
         print(" ")
         print(busc_rel(documento))
-        

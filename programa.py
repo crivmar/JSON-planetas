@@ -30,3 +30,7 @@ while m!=6:
     if m==4:
         print(" ")
         print(busc_rel(documento))
+    ## Ejercicio 5 ##
+    if m==5:
+    
+print("Fin del programa.")

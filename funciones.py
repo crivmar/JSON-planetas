@@ -108,9 +108,7 @@ def busc_rel(l):
     dic={}
     var=None
     for i in l:
-        if i.get("name")=="Earth":                
-            dic["Tierra"]="La Luna"
-        elif i.get("name")=="Mars":
+        if i.get("name")=="Mars":
             dic["Marte"]=i.get("moons")
         elif i.get("name")=="Jupiter":
             dic["Jupiter"]=i.get("moons")
@@ -134,7 +132,9 @@ def busc_rel(l):
         if var==None:
             var="No existe en la base de datos."
     return var
-    
+
+def dist(l):
+
 
     
 

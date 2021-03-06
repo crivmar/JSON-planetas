@@ -34,6 +34,6 @@ while m!=6:
     if m==5:
         for i,j in dist(documento).items():
             print(" ")
-            print("La distancia de %s al Sol es de: %.2f km." % (i,(j*149597870.7)))
-            print("La luz tarda aproximadamente %i minutos en llegar." % ((j*149597870.7)/300000//60))
+            print("La distancia de %s al Sol es de: %.2f millones de km." % (i,(j*149.6)))
+            print("La luz tarda aproximadamente %i minutos en llegar." % ((j*149.6)/0.3//60))
 print("Fin del programa.")

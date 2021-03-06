@@ -37,6 +37,8 @@ def listar_info(l):
             dic["Neptuno"]=i.get("image")
         elif i.get("name")=="Pluto":
             dic["Pluton"]=i.get("image")
+        else:
+            dic[i.get("name")]=i.get("image")
     return dic
 
 def cont_info(l):
